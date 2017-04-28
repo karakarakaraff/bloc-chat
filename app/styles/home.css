@@ -1,0 +1,16 @@
+.home-view {
+  height: 100%;
+}
+
+.sidebar {
+  float: left;
+  width: 25%;
+  background-color: #dedede;
+  padding: 35px;
+  margin-right: 35px;
+  min-height: 100%;
+}
+
+.chat-room {
+  padding: 35px;
+}

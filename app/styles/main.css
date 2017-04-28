@@ -1,6 +1,24 @@
-(function() {
-  function HomeCtrl() {}
-  angular .module('blocChat') .controller('HomeCtrl', HomeCtrl);
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-)();
+html {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  color: #000;
+  height: 100%;
+}
+
+h1 {
+  color: #4a4a4a;
+}
+
+h3 {
+  color: #979797;
+}
