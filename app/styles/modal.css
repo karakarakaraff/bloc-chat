@@ -1,0 +1,27 @@
+.modal-content {
+  padding: 35px;
+  background-color: #d8d8d8;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  border-radius: 0;
+}
+
+.modal-title {
+  font-size: 1.5em;
+  color: #4a4a4a;
+}
+
+.modal-body {
+  font-size: 1em;
+  color: #979797;
+  padding: 15px 0;
+}
+
+.modal-btn-cancel {
+  color: #979797;
+  background-color: #dedede;
+}
+
+.modal-btn-create {
+  color: #fbfcfe;
+  background-color: #979797;
+}

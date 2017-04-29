@@ -11,14 +11,6 @@ html {
 
 body {
   font-family: sans-serif;
-  color: #000;
-  height: 100%;
-}
-
-h1 {
   color: #4a4a4a;
-}
-
-h3 {
-  color: #979797;
+  height: 100%;
 }

@@ -11,6 +11,30 @@
   min-height: 100%;
 }
 
+h1.sidebar-title {
+  font-size: 2em;
+  color: #4a4a4a;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: left;
+  margin-right: 20px;
+}
+
+h3.sidebar-room {
+  font-size: 1.15em;
+  color: #979797;
+  margin: 0 0 0.85em 0;
+}
+
+.sidebar-btn-add {
+  color: #979797;
+  background-color: #fbfcfe;
+}
+
+.room-list {
+  margin-top: 1.5em;
+}
+
 .chat-room {
   padding: 35px;
 }
