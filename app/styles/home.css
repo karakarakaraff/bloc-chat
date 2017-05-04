@@ -24,6 +24,7 @@ h3.sidebar-room {
   font-size: 1.15em;
   color: #979797;
   margin: 0 0 0.85em 0;
+  display: inline-block;
 }
 
 .sidebar-btn-add {
@@ -35,6 +36,29 @@ h3.sidebar-room {
   margin-top: 1.5em;
 }
 
+[ng-click] {
+  cursor: pointer;
+}
+
 .chat-room {
-  padding: 35px;
+  padding-top: 35px;
+}
+
+h1.active-room-title {
+  margin-top: 0px;
+}
+
+.message {
+  padding: 10px;
+  border-bottom: 1px solid #dedede;
+}
+
+.message-username {
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.message-time {
+  font-size: x-small;
+  color: #979797;
 }
