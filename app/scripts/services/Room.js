@@ -15,15 +15,10 @@
     var rooms = $firebaseArray(ref);
 
     /**
-     * @function Room.add
+     * @function Room.add (included in return statement)
      * @desc Creates a new chat room by adding it to the database's "rooms" data
-     * @param {Object} roomName
-
-    Room.add = function(roomName) {
-      rooms.$add(roomName);
-    };
-    */
-
+     * @param {Object} newRoom
+     */
     return {
       all: rooms,
       add: function(newRoom) {
