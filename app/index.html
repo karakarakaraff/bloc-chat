@@ -4,14 +4,21 @@
 <head lang="en">
   <meta charset="UTF-8">
   <title>Bloc Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+  <link rel="stylesheet" href="/styles/normalize.css">
   <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/modal.css">
 </head>
 
 <body>
+  <ui-view></ui-view>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -26,6 +33,10 @@
 
   </script>
   <script src="/scripts/app.js"></script>
+  <script src="/scripts/services/Room.js"></script>
+  <script src="/scripts/controllers/HomeCtrl.js"></script>
+  <script src="/scripts/controllers/ModalCtrl.js"></script>
+  <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
 </body>
 
 </html>

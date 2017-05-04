@@ -1,0 +1,16 @@
+<main class="home-view">
+  <section class="sidebar">
+    <h1 class="sidebar-title">Bloc Chat</h1>
+    <div ng-controller="ModalCtrl as modal">
+      <button type="button" class="btn sidebar-btn-add" ng-click="modal.open()">New Room</button>
+    </div>
+    <div class="room-list">
+      <div ng-repeat="room in home.rooms">
+        <h3 class="sidebar-room">{{ room.$value }}</h3>
+      </div>
+    </div>
+  </section>
+  <section class="chat-room">
+    <p>This is where the chat room content will go.</p>
+  </section>
+</main>
