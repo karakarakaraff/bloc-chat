@@ -11,7 +11,7 @@
     </div>
   </section>
   <section class="chat-room">
-    <h1 class="active-room-title">{{ activeRoom.$value }}</h1>
+    <h1 class="active-room-title">{{ home.activeRoom.$value }}</h1>
     <p ng-show="!activeRoom">Welcome to Bloc Chat! Select a room to join the conversation.</p>
     <div class="message" ng-repeat="message in home.messages">
       <p><span class="message-username">{{ message.username }}</span><span class="message-time">{{ message.sentAt }}</span></p>

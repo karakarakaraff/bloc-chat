@@ -1,16 +1,16 @@
 (function() {
-  function HomeCtrl(Room, Message, $scope) {
+  function HomeCtrl(Room, Message) {
     this.rooms = Room.all;
 
-    $scope.activeRoom = null;
+    this.activeRoom = null;
     this.changeRoom = function(room) {
-      $scope.activeRoom = room;
-      this.messages = Message.getByRoomId($scope.activeRoom.$id);
+      this.activeRoom = room;
+      this.messages = Message.getByRoomId(this.activeRoom.$id);
     };
 
   }
 
   angular
     .module('blocChat')
-    .controller('HomeCtrl', ['Room', 'Message', '$scope', HomeCtrl]);
+    .controller('HomeCtrl', ['Room', 'Message', HomeCtrl]);
 })();
