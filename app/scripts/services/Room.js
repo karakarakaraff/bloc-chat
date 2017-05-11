@@ -6,7 +6,7 @@
      * @desc References the Firebase database and queries the "rooms" data
      * @type {Object}
      */
-    var ref = firebase.database().ref().child("rooms");
+    var ref = firebase.database().ref().child('rooms');
 
     /**
      * @desc Creates an array of the "rooms" data queried above

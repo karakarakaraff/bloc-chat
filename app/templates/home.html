@@ -6,11 +6,16 @@
     </div>
     <div class="room-list">
       <div ng-repeat="room in home.rooms">
-        <h3 class="sidebar-room">{{ room.$value }}</h3>
+        <h3 class="sidebar-room" ng-click="home.changeRoom(room)">{{ room.$value }}</h3>
       </div>
     </div>
   </section>
   <section class="chat-room">
-    <p>This is where the chat room content will go.</p>
+    <h1 class="active-room-title">{{ home.activeRoom.$value }}</h1>
+    <p ng-show="!activeRoom">Welcome to Bloc Chat! Select a room to join the conversation.</p>
+    <div class="message" ng-repeat="message in home.messages">
+      <p><span class="message-username">{{ message.username }}</span><span class="message-time">{{ message.sentAt }}</span></p>
+      <p class="message-content">{{ message.content }}</p>
+    </div>
   </section>
 </main>
