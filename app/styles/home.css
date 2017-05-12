@@ -2,7 +2,7 @@
   height: 100%;
 }
 
-.sidebar {
+#sidebar {
   float: left;
   width: 25%;
   background-color: #dedede;
@@ -40,8 +40,10 @@ h3.sidebar-room {
   cursor: pointer;
 }
 
-.chat-room {
-  padding-top: 35px;
+#chat-room {
+  padding: 35px 35px 35px 0;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 h1.active-room-title {
@@ -61,4 +63,11 @@ h1.active-room-title {
 .message-time {
   font-size: x-small;
   color: #979797;
+}
+
+#new-message {
+  position: fixed;
+  bottom: 0;
+  padding: 35px 35px 35px 0;
+  background-color: #fff;
 }

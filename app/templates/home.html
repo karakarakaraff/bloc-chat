@@ -1,5 +1,5 @@
 <main class="home-view">
-  <section class="sidebar">
+  <section id="sidebar">
     <h1 class="sidebar-title">Bloc Chat</h1>
     <div ng-controller="ModalCtrl as modal">
       <button type="button" class="btn sidebar-btn-add" ng-click="modal.open()">New Room</button>
@@ -10,12 +10,20 @@
       </div>
     </div>
   </section>
-  <section class="chat-room">
+  <section id="chat-room">
+    <p ng-show="home.activeRoom === null">Welcome to Bloc Chat! Select a room to join the conversation.</p>
     <h1 class="active-room-title">{{ home.activeRoom.$value }}</h1>
-    <p ng-show="!activeRoom">Welcome to Bloc Chat! Select a room to join the conversation.</p>
     <div class="message" ng-repeat="message in home.messages">
       <p><span class="message-username">{{ message.username }}</span><span class="message-time">{{ message.sentAt }}</span></p>
       <p class="message-content">{{ message.content }}</p>
+    </div>
+    <div id="new-message">
+      <form ng-submit="home.sendMessage(home.newMessage, home.activeRoom)">
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="home.newMessage" title="message" autofocus>
+          <span class="input-group-btn"><button class="btn btn-default modal-btn-create" type="button" ng-click="home.sendMessage()">Send</button></span>
+        </div>
+      </form>
     </div>
   </section>
 </main>
