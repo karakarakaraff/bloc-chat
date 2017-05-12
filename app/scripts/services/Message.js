@@ -1,5 +1,5 @@
 (function() {
-  function Message($firebaseArray, $cookies) {
+  function Message($firebaseArray, $cookies, $filter) {
     var Message = {};
 
     /**
@@ -25,14 +25,15 @@
 
     /**
      * @function Message.send
-     * @desc Send a new message
+     * @desc Sends a new message to the database with all necessary properties
      * @param {Object} newMessage
      */
     Message.send = function(newMessage, activeRoom) {
+      var date = new Date();
       messages.$add({
         content: newMessage,
         roomId: activeRoom.$id,
-        sentAt: 'time date',
+        sentAt: $filter('date')(date, 'EEEE @ h:mma (M/d/yy)'),
         username: $cookies.get('blocChatCurrentUser')
       });
     };
@@ -43,5 +44,5 @@
 
   angular
     .module('blocChat')
-    .factory('Message', ['$firebaseArray', '$cookies', Message]);
+    .factory('Message', ['$firebaseArray', '$cookies', '$filter', Message]);
 })();

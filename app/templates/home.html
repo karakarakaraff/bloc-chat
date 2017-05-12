@@ -11,13 +11,20 @@
     </div>
   </section>
   <section id="chat-room">
-    <p ng-show="home.activeRoom === null">Welcome to Bloc Chat! Select a room to join the conversation.</p>
-    <h1 class="active-room-title">{{ home.activeRoom.$value }}</h1>
-    <div class="message" ng-repeat="message in home.messages">
-      <p><span class="message-username">{{ message.username }}</span><span class="message-time">{{ message.sentAt }}</span></p>
-      <p class="message-content">{{ message.content }}</p>
+    <div class="intro" ng-show="home.activeRoom === null">
+      <p class="lead">Welcome to Bloc Chat! Select a room to join the conversation.</p>
+      <img src="../assets/hello.png" class="img-responsive" alt="Hello">
     </div>
-    <div id="new-message">
+    <h1 ng-show="home.activeRoom !== null" class="active-room-title">{{ home.activeRoom.$value }}</h1>
+    <div id="messages" ng-show="home.activeRoom !== null">
+      <p class="chat-note chat-beginning">Beginning of chat</p>
+      <div class="message" ng-repeat="message in home.messages">
+        <p><span class="message-username">{{ message.username }}</span><span class="message-time">{{ message.sentAt }}</span></p>
+        <p class="message-content">{{ message.content }}</p>
+      </div>
+      <p class="chat-note chat-end">End of chat</p>
+    </div>
+    <div id="new-message" ng-show="home.activeRoom !== null">
       <form ng-submit="home.sendMessage(home.newMessage, home.activeRoom)">
         <div class="input-group">
           <input type="text" class="form-control" ng-model="home.newMessage" title="message" autofocus>
