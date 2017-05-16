@@ -2,13 +2,15 @@
   height: 100%;
 }
 
-.sidebar {
+#sidebar {
   float: left;
   width: 25%;
   background-color: #dedede;
   padding: 35px;
   margin-right: 35px;
   min-height: 100%;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 h1.sidebar-title {
@@ -40,17 +42,46 @@ h3.sidebar-room {
   cursor: pointer;
 }
 
-.chat-room {
-  padding-top: 35px;
+#chat-room {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.intro {
+  padding: 35px 35px 35px 0;
+  text-align: center;
 }
 
 h1.active-room-title {
   margin-top: 0px;
+  position: fixed;
+  top: 0;
+  padding: 35px 0;
+  background-color: #fff;
+  width: 100%;
+}
+
+#messages {
+  padding: 100px 35px 100px 0;
+}
+
+.chat-note {
+  font-size: x-small;
+  font-style: italic;
+  color: #dedede;
+  padding: 5px 0;
+}
+
+.chat-beginning {
+  border-bottom: 1px solid #dedede;
+}
+
+.chat-end {
+  border-top: 1px solid #dedede;
 }
 
 .message {
   padding: 10px;
-  border-bottom: 1px solid #dedede;
 }
 
 .message-username {
@@ -61,4 +92,11 @@ h1.active-room-title {
 .message-time {
   font-size: x-small;
   color: #979797;
+}
+
+#new-message {
+  position: fixed;
+  bottom: 0;
+  padding: 35px 35px 35px 0;
+  background-color: #fff;
 }
