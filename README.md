@@ -1,6 +1,6 @@
 # Bloc Chat
 
-Bloc Chat is a real-time chat application using Firebase and AngularJS. This project was built for Bloc's [Web Development Program](https://www.bloc.io).
+Bloc Chat is a real-time chat application using Firebase and AngularJS. Read a case study about building this project on my portfolio website at [karaflaherty.com: Bloc Chat](http://karaflaherty.com/bloc-chat-real-time-chat-app-using-angular-and-firebase/). 
 
 ### Usernames
 When a user first enters Bloc Chat, he or she will be prompted to enter a username. Bloc Chat uses the [ngCookies module](https://docs.angularjs.org/api/ngCookies) to remember the username and keep it active. This username will be displayed in the chat rooms, and it will persist for as long as it remains in the user's browser cookies. 
@@ -31,3 +31,6 @@ bloc-chat
 |       |---> sentAt: "time date"
 |       |---> username: "testing123"
 ```
+
+---
+This project was built for [Bloc's Web Development Program](https://www.bloc.io/).
